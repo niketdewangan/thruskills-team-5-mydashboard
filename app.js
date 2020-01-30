@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var sess ={ secret:'keyboard cat', cookie:{maxAge:60000}}
+var sess ={ secret:'keyboard cat', cookie:{maxAge:70000}}
 
 
 
