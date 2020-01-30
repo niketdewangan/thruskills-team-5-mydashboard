@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
-// const { check, validationResult } = require('express-validator');
-// var MongoClient = require('mongodb').MongoClient;
-// var ObjectId = require('mongodb').ObjectID;
-// var url = "mongodb://localhost:27017/";
+
 let admins = [
   { email: 'niket.dewangan11@gmail.com', password: 'niket123!@#', name: 'Niket' }
 ]
@@ -20,14 +17,13 @@ router.post('/', function (req, res) {
   console.log(email);
   console.log(password);
   if (email != undefined && email !== '' && password != undefined && password !== '') {
-    // get the user from DB based on the given details
-
+    
     admins.forEach((u) => {
       console.log(u)
       if (u.email === email && u.password === password) {
         req.session.isLoggedIn = true;
         req.session.user = u;
-        res.redirect('/adminpanel')
+        res.redirect('/adminpanel');
       }
      else {
     res.render('admin', { title: 'admin', layout: 'adminlayout' })

@@ -53,7 +53,12 @@ body{
     border-radius: 25px;
   
 }
-
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
 .custom-btn:hover{
     
     background: linear-gradient(90deg,rgba(183,33,255,1)  0%,rgba(33,212,253,1)  100%);

@@ -82,7 +82,7 @@ router.get('/',function (req, res, next) {
     let title = req.body.title;
     let img_1 = req.body.image;
     let desc = req.body.description;
-    let project = {title, img_, desc};
+    let project = {title, img_1, desc};
     let updatedProject = {$set: project};
   
     MongoClient.connect(url, function(err, db){
